@@ -213,7 +213,7 @@ struct node* display(struct node* start) {
     printf("Team name Matches-played Wins Draws Losses Goals-scored Goals-conceded   Points\n");
     for (i = 0; i < max; i++) {
         struct node*team = teams[i];
-        printf("%d. %s  \t %d\t %d\t %d\t %d\t  %d\t  %d\t     %d\n", i, team->name, team->games, team->win, team->draw, team->loss, team->Sgoals, team->Cgoals, team->points);
+        printf("%d. %s  \t %d\t %d\t %d\t %d\t  %d\t  %d\t         %d\n", i+1, team->name, team->games, team->win, team->draw, team->loss, team->Sgoals, team->Cgoals, team->points);
     }
 
     return start;
@@ -296,7 +296,6 @@ struct node *addgameweek(struct node *start) {
     printf("Game week updated successfully.\n");
     return start;
 }
-
 // Bubble sort function for descending order
 void bubbleSortDescending(int arr[], int n) {
     int temp;
